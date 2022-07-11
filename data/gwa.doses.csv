@@ -1,0 +1,57 @@
+drug,concentration_um,diluent ,class
+2_4-D,751.31,DMSO,Toxicant
+Aldicarb,156.25,DMSO,Toxicant
+Arsenic trioxide,242.26,Water,Toxicant
+Atrazine,510.2,DMSO,Toxicant
+Bacterial dilution,0.6,Water,Toxicant
+Cadmium dichloride,100,Water,Toxicant
+Carbaryl,262.14,DMSO,Toxicant
+Carboxin,538.66,DMSO,Toxicant
+Chlorfenapyr,0.62,DMSO,Toxicant
+Chlorothalonil,111.11,DMSO,Toxicant
+Chlorpyrifos,2.7,DMSO,Toxicant
+Copper chloride,100,Water,Toxicant
+Lead nitrate,49.74,Water,Toxicant
+Malathion,790.12,DMSO,Toxicant
+Mancozeb,102.4,DMSO,Toxicant
+Methomyl,50,DMSO,Toxicant
+Methyl mercury,15.62,DMSO,Toxicant
+Nickel dichloride,100,Water,Toxicant
+Paraquat_62.5,62.5,Water,Toxicant
+Paraquat_250,250,Water,Toxicant
+Propoxur,195.09,DMSO,Toxicant
+Pyraclostrobin,93.75,DMSO,Toxicant
+Silver nitrate_250,250,Water,Toxicant
+Silver nitrate_7.8,7.8,Water,Toxicant
+Triphenyl phosphate_6.25,6.25,DMSO,Toxicant
+Triphenyl phosphate_50,50,DMSO,Toxicant
+Zinc dichloride,50,Water,Toxicant
+DMSO,0,DMSO,Both
+Water,0,Water,Both
+Monepantel_LY3348298_0.023,0.023,DMSO,Anthelmintic
+Monepantel_LY3348298_0.55,0.55,DMSO,Anthelmintic
+Albendazole,10.65,DMSO,Anthelmintic
+Benomyl,20.66,DMSO,Anthelmintic
+Fenbendazole,10.65,DMSO,Anthelmintic
+Mebendazole,48,DMSO,Anthelmintic
+Ricobendazole,25,DMSO,Anthelmintic
+Thiabendazole,62.99,DMSO,Anthelmintic
+Emodepside,0.15,DMSO,Anthelmintic
+Closantel,9.4,DMSO,Anthelmintic
+Abamectin,0.002,DMSO,Anthelmintic
+Doramectin,0.005,DMSO,Anthelmintic
+Eprinomectin,0.044,DMSO,Anthelmintic
+Ivermectin,0.012,DMSO,Anthelmintic
+Moxidectin,0.003,DMSO,Anthelmintic
+Milbemycin,0.12,DMSO,Anthelmintic
+Selamectin,0.39,DMSO,Anthelmintic
+Zoetis_0007437,0.1875,DMSO,Anthelmintic
+Zoetis_00507244,9.778,DMSO,Anthelmintic
+Zoetis_7027178,22,DMSO,Anthelmintic
+Zoetis_7027187,21.12,DMSO,Anthelmintic
+Levamisole,27.27,DMSO,Anthelmintic
+Morantel,41.25,DMSO,Anthelmintic
+Pyrantel_cytrate_9.38,9.38,DMSO,Anthelmintic
+Pyrantel_cytrate_37.5,37.5,DMSO,Anthelmintic
+Cry5B,22,Water,Anthelmintic
+Ivermectin_0.008,0.008,DMSO,Anthelmintic
