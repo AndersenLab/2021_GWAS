@@ -544,7 +544,30 @@ purrr::map2(.x = pre.traitfiles$data,
               write_tsv(trait.data, file = paste0("data/",trait,"_traitfile.tsv"))
               }
             )
-write_tsv(nemascan.traitfile, paste("output/toxin_ant_traitfile", today, "tsv", sep = "."))
+
+unique(GWA.df.2$drug) %in% unique(gwa.metadata$drug)
+
+toxicant.traitfile <- GWA.df.2 %>%
+  dplyr::select(strain, drug, median_wormlength_um_delta_reg) %>%
+  dplyr::group_by(strain, drug) %>%
+  dplyr::summarise(mean = mean(median_wormlength_um_delta_reg)) %>%
+  dplyr::left_join(., gwa.metadata) %>%
+  dplyr::filter(class == "Toxicant",
+                drug != "Bacterial dilution") %>%
+  dplyr::select(strain, drug, mean) %>%
+  tidyr::pivot_wider(names_from = drug, values_from = mean) %>%
+  dplyr::mutate(strain = if_else(strain == "PD1074", true = "N2", false = strain))
+write_tsv(toxicant.traitfile, file = "output/toxicant.tratifile.tsv")
+
+anthelmintic.traitfile <- GWA.df.2 %>%
+  dplyr::select(strain, drug, median_wormlength_um_delta_reg) %>%
+  dplyr::group_by(strain, drug) %>%
+  dplyr::summarise(mean = mean(median_wormlength_um_delta_reg)) %>%
+  dplyr::left_join(., gwa.metadata) %>%
+  dplyr::filter(class == "Anthelmintic") %>%
+  dplyr::select(strain, drug, mean) %>%
+  tidyr::pivot_wider(names_from = drug, values_from = mean)
+write_tsv(anthelmintic.traitfile, file = "output/anthelmintic.traitfile.tsv")
 
 
 assay_raw_wormlength_dists <- GWA.df.2 %>%
