@@ -667,7 +667,11 @@ ggsave(tx.sentinel.phenotypes, filename = paste0("plots/sentinelphenos.", today,
 ####################
 ### HERITABILITY ###
 ####################
+geno_matrix <- data.table::fread("data/Genotype_Matrix.tsv") %>%
+  as.data.frame() %>%
+  dplyr::rename(PD1074 = N2)
 
+complete.genos <- geno_matrix[complete.cases(geno_matrix),]
 
 H2 <- function(d){
   strain.fit <- lme4::lmer(data = d, formula = value ~ 1 + (1|strain))
@@ -765,15 +769,7 @@ H2.bootstrapping.calc <- function(d, nreps = 100, boot = T, geno_matrix){
 
 
 
-all.H2s %>%
-  Reduce(rbind,.) %>%
-  ggplot(., mapping = aes(x = h2)) + 
-  theme_bw() + 
-  geom_histogram(bins = 15, fill = "#4E2A84") + 
-  theme(panel.grid = element_blank()) + 
-  xlim(c(0,1)) + 
-  labs(x = expression(italic(h^2)),
-       y = "Number of traits")
+
 
 # H2.plot <- function(H2.out){
 all.H2s <- list()
